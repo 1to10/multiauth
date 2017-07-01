@@ -72,7 +72,21 @@ class BannerCrudController extends CrudController
             'date_range_options' => [ // options sent to daterangepicker.js
                 'timePicker' => true,
                 'locale' => ['format' => 'DD/MM/YYYY HH:mm']
-            ]
+            ],
+            $this->crud->addField( [ // Table
+                'name' => 'option',
+                'label' => 'Options',
+                'type' => 'table',
+                'entity_singular' => 'option', // used on the "Add X" button
+                'columns' => [
+                    'name' => 'Name',
+                    'desc' => 'Description',
+                    'price' => 'Price'
+                ],
+                'max' => 5, // maximum rows allowed in the table
+                'min' => 0 ,// minimum rows allowed in the table
+                'store_as_json' => true
+            ]),
         ]);
         //$this->crud->enableDetailsRow();
         // gets all the filters

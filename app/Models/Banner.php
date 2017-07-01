@@ -18,7 +18,7 @@ class Banner extends Model
     // protected $primaryKey = 'id';
     // protected $guarded = [];
     // protected $hidden = ['id'];
-    protected $fillable = ['name','address','image','start_date','end_date'];
+    protected $fillable = ['name','address','image','start_date','end_date','option'];
 
 
     public $timestamps = true;
